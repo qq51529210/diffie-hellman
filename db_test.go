@@ -1,7 +1,10 @@
-# diffie-hellman
-交换可逆加密的密钥
-## 用法
-```go
+package diffie_hellman
+
+import (
+	"bytes"
+	"testing"
+)
+
 func Test_DiffieHellman(t *testing.T) {
 	keyLen := 32
 	// 1. 生成本地的随机数
@@ -31,4 +34,3 @@ func Test_DiffieHellman(t *testing.T) {
 		t.FailNow()
 	}
 }
-```
