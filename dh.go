@@ -37,7 +37,7 @@ func GenExchangeKey(a *big.Int, b []byte) {
 	n.FillBytes(b[:])
 }
 
-// 生成crypto key，exchangeKey是对方的交换密钥，cryptoKey是接收key的缓存，b是本地生成的随机数
+// 生成crypto key，exchangeKey是对方的交换密钥，cryptoKey是接收key的缓存，n是本地生成的随机数
 func GenCryptoKey(exchangeKey, cryptoKey []byte, n *big.Int) {
 	// 还原
 	a := big.NewInt(0).SetBytes(exchangeKey)
